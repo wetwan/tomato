@@ -1,0 +1,285 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Prata&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ /* className={({isActive}) => isActive ? 'pb-0.5 border-b border-[#496672]  capitalize text-[#49556e] text-lg' : ' capitalize text-[#49556e] text-lg'}
+   className=' capitalize text-[#49556e] text-lg scroll-smooth'
+    */
+
+
+*{
+  scroll-behavior: smooth;
+  scroll-margin-top: 300px;
+}
+
+
+@layer components {
+  .active {
+   padding-bottom: 2px;
+   border-bottom: 2px solid #496672;
+   text-transform: capitalize;
+   color: #49556e;
+   font-size: 18px ;
+   transition: all;
+   cursor: pointer;
+   scroll-margin-top: 300px;
+
+  }
+}
+@layer components {
+  .notactive {
+  cursor: pointer;
+  scroll-margin-top: 300px;
+   text-transform: capitalize;
+   color: #49556e;
+   font-size: 18px ;
+   transition: all;
+  }
+}
+
+
+@layer components {
+  .custom-font-size {
+    font-size: max(3.5vw, 20px);
+  }
+}
+@layer components {
+  .p-size {
+    font-size: max(1vw, 13px);
+  }
+}
+@layer components {
+  .p-name {
+    font-size: max(1.4vw, 16px);
+  }
+}
+@layer components {
+  .h2-food {
+    font-size: max(2vw, 24px);
+  }
+}
+@layer components {
+  .store{
+    font-size: max(3vw, 20px);
+    gap: max(2vw, 10px);
+  }
+}
+@layer components {
+  .store-img{
+    width: max(30vw, 120px);
+    max-width: 180px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .shadow-food {
+    box-shadow: 1px 1px 10px #00000015; 
+  }
+}
+
+@layer components {
+  .image-food {
+    border-radius: 15px 15px 0px 0px; 
+  }
+}
+
+
+@layer components {
+  .food-grid {
+   display: grid;
+   grid-template-columns:  repeat(auto-fill, minmax(230px , 1fr));
+   margin-top: 30px;
+   gap: 30px;
+   row-gap: 50px;
+  }
+}
+@layer components {
+  .footer-grid {
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr;
+   margin-top: 30px;
+   gap: 80px;
+  }
+}
+@layer components {
+  .footer-li {
+    margin-bottom: 10px;
+  }
+}
+/* Add this to your index.css or tailwind.css */
+@layer components {
+  .food-active {
+    border: 4px solid tomato;
+    padding: 2px;
+    width: 100% ;
+    border-radius: 50%;
+    transition:border-radius 0.2 ease-in;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 3s ;
+  }
+}
+@layer utilities {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fade-ins {
+    animation: fadeIn 1s ;
+  }
+}
+
+@layer utilities {
+  .form {
+    place-self: center;
+    width: max(23vw , 330px);
+    color: #98989898;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    gap: 25px;
+    padding: 25px 30px;
+    font-size: 14px;
+    animation: fadein 0.5s ;
+  }
+}
+@layer utilities {
+  .form-input {
+   outline: none;
+   border: 1px solid #c8c8c8;
+   padding: 10px;
+   border-radius: 10px;
+  }
+}
+@layer utilities {
+  .title{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr  1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: grey;
+    font-size: max(1vw , 12px);
+  }
+}
+@layer utilities {
+  .from1{
+   max-width: max(30% , 500px);
+  }
+}
+@layer utilities {
+  .from12{
+   max-width: max(40% , 500px);
+  }
+}
+@layer utilities {
+  .fromcheck{
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px ;
+  border: 1px solid #c6c6c6;
+  border-radius: 6px;
+  outline-color:tomato ;
+  }
+}
+@layer utilities {
+  .fromcheck-multi{
+      display:flex ;
+      gap: 10px;
+  }
+}
+
+
+@layer utilities {
+  .totals{
+   display: flex;
+   justify-content: space-between;
+   color:#555;
+   text-transform: capitalize;
+  }
+}
+@layer utilities {
+  .title-item{
+  margin: 10px 0;
+  color: black;
+  }
+}
+@layer utilities {
+  .gap{
+    gap: max(12vw, 20px);
+  }
+}
+@layer utilities {
+  .width{
+    width: max(15vw, 200px);
+    padding: 12px 0px;
+    border-radius: 4px ;
+    cursor: pointer;
+  }
+}
+@layer utilities {
+  .button{
+    width: max(10vw, 150px);
+    padding: 12px 5px;
+    border-radius: 4px ;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+}
+
+@layer utilities {
+  .form-span {
+  color: tomato;
+  font-weight: 500;
+  cursor: pointer;
+  }
+}
+
+
+@layer utilities {
+  .scrollbar-hide {
+    /* For most modern browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
+
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
